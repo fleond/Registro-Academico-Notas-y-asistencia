@@ -1,0 +1,652 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+/* =========================================================================
+   LIGHT THEME ENHANCEMENTS & HIGH-CONTRAST PALETTE
+   Estilo Corporativo y Suave:
+   - Fondo: Gris aperlado (#F3F4F6)
+   - Texto principal: Azul marino oscuro (#1E293B)
+   - Acento / Botones: Verde esmeralda (#059669) e Índigo / Púrpura / Carmesí nítidos
+   - Detalles / Bordes: Gris intermedio (#CBD5E1)
+   ========================================================================= */
+
+.theme-light,
+html.theme-light,
+body.theme-light {
+  background-color: #f3f4f6 !important;
+  color: #1e293b !important;
+  color-scheme: light;
+}
+
+/* Base App & Page Backgrounds */
+.theme-light .bg-\[\#090d16\],
+.theme-light .bg-\[\#0f172a\],
+.theme-light .bg-\[\#0a0f1d\],
+.theme-light .bg-\[\#0e1424\] {
+  background-color: #f3f4f6 !important;
+  color: #1e293b !important;
+}
+
+/* Cards, Panels, Modals, Tables, Dropdowns */
+.theme-light .bg-slate-900,
+.theme-light .bg-slate-900\/95,
+.theme-light .bg-slate-900\/90,
+.theme-light .bg-slate-900\/80,
+.theme-light .bg-slate-900\/70,
+.theme-light .bg-slate-900\/60,
+.theme-light .bg-slate-900\/50,
+.theme-light .bg-slate-900\/40,
+.theme-light .bg-slate-950,
+.theme-light .bg-slate-950\/95,
+.theme-light .bg-slate-950\/90,
+.theme-light .bg-slate-950\/80,
+.theme-light .bg-slate-950\/70,
+.theme-light .bg-slate-950\/60,
+.theme-light .bg-slate-950\/50,
+.theme-light .bg-slate-950\/40,
+.theme-light .bg-slate-950\/30,
+.theme-light .bg-slate-950\/20 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #1e293b !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08), 0 1px 2px -1px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Secondary Interactive Items, Neutral Buttons & Sub-containers */
+.theme-light .bg-slate-800,
+.theme-light .bg-slate-800\/95,
+.theme-light .bg-slate-800\/90,
+.theme-light .bg-slate-800\/80,
+.theme-light .bg-slate-800\/70,
+.theme-light .bg-slate-800\/60,
+.theme-light .bg-slate-800\/50,
+.theme-light .bg-slate-800\/40,
+.theme-light .bg-slate-800\/30,
+.theme-light .bg-slate-700,
+.theme-light .bg-slate-700\/80,
+.theme-light .bg-slate-700\/60,
+.theme-light .bg-slate-700\/50,
+.theme-light .bg-slate-700\/40 {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+  color: #1e293b !important;
+}
+
+/* Hover on neutral / secondary elements */
+.theme-light .hover\:bg-slate-800:hover,
+.theme-light .hover\:bg-slate-800\/80:hover,
+.theme-light .hover\:bg-slate-800\/60:hover,
+.theme-light .hover\:bg-slate-800\/50:hover,
+.theme-light .hover\:bg-slate-800\/40:hover,
+.theme-light .hover\:bg-slate-800\/30:hover,
+.theme-light .hover\:bg-slate-700:hover,
+.theme-light .hover\:bg-slate-700\/80:hover,
+.theme-light .hover\:bg-slate-700\/60:hover {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+  border-color: #94a3b8 !important;
+}
+
+/* =========================================================================
+   BUTTON VISIBILITY & CONTRAST (SOLID ACTION BUTTONS WITH WHITE TEXT)
+   ========================================================================= */
+
+/* Primary Emerald / Green Buttons (User Recommended Accent: #059669) */
+.theme-light .bg-emerald-600,
+.theme-light .bg-emerald-700,
+.theme-light .bg-emerald-500,
+.theme-light .bg-teal-600,
+.theme-light .bg-teal-700 {
+  background-color: #059669 !important;
+  color: #ffffff !important;
+  border-color: #047857 !important;
+  box-shadow: 0 2px 4px rgba(5, 150, 105, 0.25) !important;
+}
+.theme-light .bg-emerald-600:hover,
+.theme-light .bg-emerald-700:hover,
+.theme-light .bg-emerald-500:hover {
+  background-color: #047857 !important;
+  color: #ffffff !important;
+}
+
+/* Primary Indigo / Blue Action Buttons */
+.theme-light .bg-indigo-600,
+.theme-light .bg-indigo-700,
+.theme-light .bg-indigo-500,
+.theme-light .bg-blue-600,
+.theme-light .bg-blue-700,
+.theme-light .bg-sky-600 {
+  background-color: #4f46e5 !important;
+  color: #ffffff !important;
+  border-color: #4338ca !important;
+  box-shadow: 0 2px 4px rgba(79, 70, 229, 0.25) !important;
+}
+.theme-light .bg-indigo-600:hover,
+.theme-light .bg-indigo-700:hover,
+.theme-light .bg-indigo-500:hover,
+.theme-light .bg-blue-600:hover {
+  background-color: #4338ca !important;
+  color: #ffffff !important;
+}
+
+/* Primary Purple / Admin Action Buttons */
+.theme-light .bg-purple-600,
+.theme-light .bg-purple-700,
+.theme-light .bg-purple-500,
+.theme-light .bg-violet-600 {
+  background-color: #7c3aed !important;
+  color: #ffffff !important;
+  border-color: #6d28d9 !important;
+  box-shadow: 0 2px 4px rgba(124, 58, 237, 0.25) !important;
+}
+.theme-light .bg-purple-600:hover,
+.theme-light .bg-purple-700:hover {
+  background-color: #6d28d9 !important;
+  color: #ffffff !important;
+}
+
+/* Primary Rose / Red Action Buttons */
+.theme-light .bg-rose-600,
+.theme-light .bg-rose-700,
+.theme-light .bg-rose-500,
+.theme-light .bg-red-600 {
+  background-color: #dc2626 !important;
+  color: #ffffff !important;
+  border-color: #b91c1c !important;
+  box-shadow: 0 2px 4px rgba(220, 38, 38, 0.25) !important;
+}
+.theme-light .bg-rose-600:hover,
+.theme-light .bg-rose-700:hover {
+  background-color: #b91c1c !important;
+  color: #ffffff !important;
+}
+
+/* Primary Amber / Yellow Warning Buttons */
+.theme-light .bg-amber-600,
+.theme-light .bg-amber-700,
+.theme-light .bg-amber-500,
+.theme-light .bg-yellow-600 {
+  background-color: #d97706 !important;
+  color: #ffffff !important;
+  border-color: #b45309 !important;
+  box-shadow: 0 2px 4px rgba(217, 119, 6, 0.25) !important;
+}
+.theme-light .bg-amber-600:hover,
+.theme-light .bg-amber-700:hover {
+  background-color: #b45309 !important;
+  color: #ffffff !important;
+}
+
+/* Force All Inner Text and Icons in Solid Primary Buttons to Pure White */
+.theme-light .bg-emerald-600 *,
+.theme-light .bg-emerald-700 *,
+.theme-light .bg-emerald-500 *,
+.theme-light .bg-teal-600 *,
+.theme-light .bg-indigo-600 *,
+.theme-light .bg-indigo-700 *,
+.theme-light .bg-indigo-500 *,
+.theme-light .bg-purple-600 *,
+.theme-light .bg-purple-700 *,
+.theme-light .bg-purple-500 *,
+.theme-light .bg-rose-600 *,
+.theme-light .bg-rose-700 *,
+.theme-light .bg-rose-500 *,
+.theme-light .bg-amber-600 *,
+.theme-light .bg-amber-700 *,
+.theme-light .bg-blue-600 *,
+.theme-light .bg-sky-600 *,
+.theme-light .bg-pink-600 * {
+  color: #ffffff !important;
+}
+
+/* =========================================================================
+   SECONDARY & NEUTRAL BUTTONS (CLEAR VISIBILITY, BORDERS & SHADOWS)
+   ========================================================================= */
+
+.theme-light button {
+  transition: all 0.15s ease;
+}
+
+/* Neutral buttons with dark background in dark mode -> crisp white card style in light mode */
+.theme-light button.bg-slate-800,
+.theme-light button.bg-slate-900,
+.theme-light button.bg-slate-900\/90,
+.theme-light button.bg-slate-900\/80,
+.theme-light button.bg-slate-800\/80,
+.theme-light button.bg-slate-800\/60,
+.theme-light button.bg-slate-700 {
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #1e293b !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.theme-light button.bg-slate-800 *,
+.theme-light button.bg-slate-900 *,
+.theme-light button.bg-slate-900\/90 *,
+.theme-light button.bg-slate-800\/80 *,
+.theme-light button.bg-slate-800\/60 * {
+  color: #1e293b !important;
+}
+
+.theme-light button.bg-slate-800:hover,
+.theme-light button.bg-slate-900:hover,
+.theme-light button.bg-slate-900\/90:hover,
+.theme-light button.bg-slate-800\/80:hover {
+  background-color: #f1f5f9 !important;
+  border-color: #94a3b8 !important;
+  color: #0f172a !important;
+}
+
+/* =========================================================================
+   SOFT TINTED PILLS & STATUS BADGES (HIGH CONTRAST & LEGIBILITY)
+   ========================================================================= */
+
+/* Purple / Docente / Admin Soft Chips */
+.theme-light .bg-purple-950,
+.theme-light .bg-purple-950\/90,
+.theme-light .bg-purple-950\/80,
+.theme-light .bg-purple-950\/60,
+.theme-light .bg-purple-950\/40,
+.theme-light .bg-purple-950\/30,
+.theme-light .bg-purple-500\/20,
+.theme-light .bg-purple-500\/10 {
+  background-color: #f3e8ff !important;
+  border: 1px solid #d8b4fe !important;
+  color: #6b21a8 !important;
+  font-weight: 600;
+}
+.theme-light .bg-purple-950 *,
+.theme-light .bg-purple-950\/60 *,
+.theme-light .bg-purple-950\/30 *,
+.theme-light .bg-purple-500\/20 * {
+  color: #6b21a8 !important;
+}
+
+/* Indigo Soft Chips */
+.theme-light .bg-indigo-950,
+.theme-light .bg-indigo-950\/90,
+.theme-light .bg-indigo-950\/80,
+.theme-light .bg-indigo-950\/60,
+.theme-light .bg-indigo-950\/40,
+.theme-light .bg-indigo-950\/30,
+.theme-light .bg-indigo-500\/20,
+.theme-light .bg-indigo-500\/10 {
+  background-color: #e0e7ff !important;
+  border: 1px solid #c7d2fe !important;
+  color: #3730a3 !important;
+  font-weight: 600;
+}
+.theme-light .bg-indigo-950 *,
+.theme-light .bg-indigo-950\/60 *,
+.theme-light .bg-indigo-500\/20 * {
+  color: #3730a3 !important;
+}
+
+/* Emerald / Presente / Asistencia Puntual Chips */
+.theme-light .bg-emerald-950,
+.theme-light .bg-emerald-950\/90,
+.theme-light .bg-emerald-950\/80,
+.theme-light .bg-emerald-950\/60,
+.theme-light .bg-emerald-950\/40,
+.theme-light .bg-emerald-950\/30,
+.theme-light .bg-emerald-500\/20,
+.theme-light .bg-emerald-500\/10 {
+  background-color: #d1fae5 !important;
+  border: 1px solid #a7f3d0 !important;
+  color: #065f46 !important;
+  font-weight: 600;
+}
+.theme-light .bg-emerald-950 *,
+.theme-light .bg-emerald-950\/60 *,
+.theme-light .bg-emerald-950\/30 *,
+.theme-light .bg-emerald-500\/20 * {
+  color: #065f46 !important;
+}
+
+/* Rose / Inasistencia / Ausente Chips */
+.theme-light .bg-rose-950,
+.theme-light .bg-rose-950\/90,
+.theme-light .bg-rose-950\/80,
+.theme-light .bg-rose-950\/60,
+.theme-light .bg-rose-950\/40,
+.theme-light .bg-rose-950\/30,
+.theme-light .bg-rose-950\/20,
+.theme-light .bg-rose-500\/20,
+.theme-light .bg-rose-500\/10 {
+  background-color: #ffe4e6 !important;
+  border: 1px solid #fecdd3 !important;
+  color: #9f1239 !important;
+  font-weight: 600;
+}
+.theme-light .bg-rose-950 *,
+.theme-light .bg-rose-950\/80 *,
+.theme-light .bg-rose-950\/60 *,
+.theme-light .bg-rose-950\/20 *,
+.theme-light .bg-rose-500\/20 * {
+  color: #9f1239 !important;
+}
+
+/* Amber / Retardo Chips */
+.theme-light .bg-amber-950,
+.theme-light .bg-amber-950\/90,
+.theme-light .bg-amber-950\/80,
+.theme-light .bg-amber-950\/60,
+.theme-light .bg-amber-950\/40,
+.theme-light .bg-amber-950\/30,
+.theme-light .bg-amber-500\/20,
+.theme-light .bg-amber-500\/10 {
+  background-color: #fef3c7 !important;
+  border: 1px solid #fde68a !important;
+  color: #92400e !important;
+  font-weight: 600;
+}
+.theme-light .bg-amber-950 *,
+.theme-light .bg-amber-950\/60 *,
+.theme-light .bg-amber-950\/30 *,
+.theme-light .bg-amber-500\/20 * {
+  color: #92400e !important;
+}
+
+/* Sky / Excusa Soft Chips */
+.theme-light .bg-sky-950,
+.theme-light .bg-sky-950\/90,
+.theme-light .bg-sky-950\/80,
+.theme-light .bg-sky-950\/60,
+.theme-light .bg-sky-950\/40,
+.theme-light .bg-sky-500\/20,
+.theme-light .bg-sky-500\/10 {
+  background-color: #e0f2fe !important;
+  border: 1px solid #7dd3fc !important;
+  color: #0369a1 !important;
+  font-weight: 600;
+}
+.theme-light .bg-sky-950 *,
+.theme-light .bg-sky-950\/60 *,
+.theme-light .bg-sky-500\/20 * {
+  color: #0369a1 !important;
+}
+
+/* Teal Soft Chips */
+.theme-light .bg-teal-950,
+.theme-light .bg-teal-950\/90,
+.theme-light .bg-teal-950\/80,
+.theme-light .bg-teal-950\/60,
+.theme-light .bg-teal-500\/20,
+.theme-light .bg-teal-500\/10 {
+  background-color: #ccfbf1 !important;
+  border: 1px solid #5eead4 !important;
+  color: #0f766e !important;
+  font-weight: 600;
+}
+.theme-light .bg-teal-950 *,
+.theme-light .bg-teal-500\/20 * {
+  color: #0f766e !important;
+}
+
+/* Orange Soft Chips */
+.theme-light .bg-orange-950,
+.theme-light .bg-orange-950\/90,
+.theme-light .bg-orange-950\/80,
+.theme-light .bg-orange-950\/60,
+.theme-light .bg-orange-500\/20,
+.theme-light .bg-orange-500\/10 {
+  background-color: #ffedd5 !important;
+  border: 1px solid #fdba74 !important;
+  color: #c2410c !important;
+  font-weight: 600;
+}
+.theme-light .bg-orange-950 *,
+.theme-light .bg-orange-500\/20 * {
+  color: #c2410c !important;
+}
+
+/* Pink / Uniforme Chips */
+.theme-light .bg-pink-950,
+.theme-light .bg-pink-950\/90,
+.theme-light .bg-pink-950\/80,
+.theme-light .bg-pink-950\/70,
+.theme-light .bg-pink-950\/60,
+.theme-light .bg-pink-950\/40,
+.theme-light .bg-pink-500\/20 {
+  background-color: #fce7f3 !important;
+  border: 1px solid #fbcfe8 !important;
+  color: #9d174d !important;
+  font-weight: 600;
+}
+.theme-light .bg-pink-950 *,
+.theme-light .bg-pink-950\/70 *,
+.theme-light .bg-pink-950\/60 *,
+.theme-light .bg-pink-500\/20 * {
+  color: #9d174d !important;
+}
+
+/* =========================================================================
+   TEXT TYPOGRAPHY & CONTRAST (AZUL MARINO OSCURO #1E293B)
+   ========================================================================= */
+
+.theme-light h1,
+.theme-light h2,
+.theme-light h3,
+.theme-light h4,
+.theme-light h5,
+.theme-light h6 {
+  color: #0f172a !important;
+  font-weight: 700;
+}
+
+.theme-light .text-slate-100 {
+  color: #0f172a !important;
+}
+
+.theme-light .text-slate-200,
+.theme-light .text-slate-300 {
+  color: #1e293b !important;
+}
+
+.theme-light .text-slate-400 {
+  color: #475569 !important;
+}
+
+.theme-light .text-slate-500 {
+  color: #64748b !important;
+}
+
+.theme-light .text-slate-600 {
+  color: #475569 !important;
+}
+
+/* Preserve bright colored text in light mode with accessible shades */
+.theme-light .text-emerald-400,
+.theme-light .text-emerald-300 {
+  color: #059669 !important;
+  font-weight: 600;
+}
+.theme-light .text-indigo-400,
+.theme-light .text-indigo-300 {
+  color: #4f46e5 !important;
+  font-weight: 600;
+}
+.theme-light .text-purple-400,
+.theme-light .text-purple-300 {
+  color: #7c3aed !important;
+  font-weight: 600;
+}
+.theme-light .text-amber-400,
+.theme-light .text-amber-300 {
+  color: #b45309 !important;
+  font-weight: 600;
+}
+.theme-light .text-rose-400,
+.theme-light .text-rose-300 {
+  color: #dc2626 !important;
+  font-weight: 600;
+}
+.theme-light .text-sky-400,
+.theme-light .text-sky-300 {
+  color: #0284c7 !important;
+  font-weight: 600;
+}
+
+/* =========================================================================
+   BORDERS (GRIS INTERMEDIO #CBD5E1)
+   ========================================================================= */
+
+.theme-light .border-slate-800,
+.theme-light .border-slate-800\/80,
+.theme-light .border-slate-800\/70,
+.theme-light .border-slate-800\/60,
+.theme-light .border-slate-800\/50,
+.theme-light .border-slate-800\/40,
+.theme-light .border-slate-700,
+.theme-light .border-slate-700\/80,
+.theme-light .border-slate-700\/60,
+.theme-light .border-slate-700\/50,
+.theme-light .divide-slate-800,
+.theme-light .divide-slate-800\/60,
+.theme-light .divide-slate-700 {
+  border-color: #cbd5e1 !important;
+}
+
+/* =========================================================================
+   FORM INPUTS, SELECTS & TEXTAREAS
+   ========================================================================= */
+
+.theme-light input,
+.theme-light select,
+.theme-light textarea {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+  border: 1.5px solid #cbd5e1 !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+}
+
+.theme-light input:focus,
+.theme-light select:focus,
+.theme-light textarea:focus {
+  border-color: #059669 !important;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.15) !important;
+  outline: none;
+}
+
+.theme-light input::placeholder,
+.theme-light textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Option dropdown elements */
+.theme-light option {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+}
+
+/* =========================================================================
+   HEADER & NAVBAR (CLEAN CORPORATE STYLE)
+   ========================================================================= */
+
+.theme-light header {
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #cbd5e1 !important;
+  color: #1e293b !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05) !important;
+}
+
+.theme-light header > div {
+  border-color: #cbd5e1 !important;
+}
+
+/* Inactive nav tabs and category buttons */
+.theme-light .bg-slate-950\/70,
+.theme-light .bg-slate-950\/60,
+.theme-light .bg-\[\#0e1424\] {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Active Category Tab in Light Mode */
+.theme-light #nav-category-classroom.bg-indigo-600\/20,
+.theme-light #nav-category-community.bg-indigo-600\/20,
+.theme-light #nav-category-reports_comm.bg-indigo-600\/20 {
+  background-color: #d1fae5 !important;
+  border-color: #059669 !important;
+  color: #065f46 !important;
+}
+
+.theme-light #nav-category-admin_system.bg-purple-600\/20 {
+  background-color: #f3e8ff !important;
+  border-color: #7c3aed !important;
+  color: #6b21a8 !important;
+}
+
+/* Breadcrumb pill */
+.theme-light header .bg-slate-900\/80 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #1e293b !important;
+}
+
+/* Quick Search Palette Modal */
+.theme-light .fixed.inset-0.bg-slate-950\/80 {
+  background-color: rgba(15, 23, 42, 0.5) !important;
+}
+
+/* Sub-nav Buttons & Active Indicators */
+.theme-light button[id^="subnav-tab-"] {
+  border: 1px solid #cbd5e1 !important;
+  color: #334155 !important;
+}
+
+.theme-light button[id^="subnav-tab-"].bg-indigo-600,
+.theme-light button[id^="subnav-tab-"].bg-emerald-600 {
+  background-color: #059669 !important;
+  color: #ffffff !important;
+  border-color: #047857 !important;
+}
+
+.theme-light button[id^="subnav-tab-"].bg-purple-600 {
+  background-color: #7c3aed !important;
+  color: #ffffff !important;
+  border-color: #6d28d9 !important;
+}
+
+/* =========================================================================
+   TABLES & LIST HEADERS
+   ========================================================================= */
+
+.theme-light table {
+  color: #1e293b !important;
+}
+
+.theme-light th,
+.theme-light thead {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-bottom: 2px solid #cbd5e1 !important;
+  font-weight: 700 !important;
+}
+
+.theme-light tr {
+  border-bottom: 1px solid #cbd5e1 !important;
+}
+
+.theme-light tr:hover {
+  background-color: #f8fafc !important;
+}
+
+/* Date picker & Color scheme fixes */
+.theme-light input[type="date"],
+.theme-light input[type="time"],
+.theme-light input[type="datetime-local"] {
+  color-scheme: light !important;
+}
+
+
+

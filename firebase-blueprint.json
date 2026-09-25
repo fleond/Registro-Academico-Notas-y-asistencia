@@ -1,0 +1,95 @@
+{
+  "entities": {
+    "students": {
+      "title": "Students",
+      "description": "Student roster with guardian contact information",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "firstName": { "type": "string" },
+        "lastName": { "type": "string" },
+        "documentId": { "type": "string" },
+        "groupId": { "type": "string" },
+        "guardianName": { "type": "string" },
+        "guardianPhone": { "type": "string" },
+        "guardianEmail": { "type": "string" },
+        "avatarColor": { "type": "string" },
+        "gender": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["id", "firstName", "lastName", "groupId"]
+    },
+    "groups": {
+      "title": "Groups",
+      "description": "Academic classes or groups",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "grade": { "type": "string" },
+        "directorName": { "type": "string" },
+        "directorPhone": { "type": "string" },
+        "room": { "type": "string" }
+      },
+      "required": ["id", "name", "grade"]
+    },
+    "activities": {
+      "title": "Activities",
+      "description": "Evaluations, quizzes and homework assignments",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "groupId": { "type": "string" },
+        "subject": { "type": "string" },
+        "period": { "type": "string" },
+        "categoryId": { "type": "string" },
+        "assignedDate": { "type": "string" },
+        "dueDate": { "type": "string" },
+        "maxScore": { "type": "number" },
+        "passingScore": { "type": "number" }
+      },
+      "required": ["id", "title", "groupId", "subject", "period", "assignedDate", "dueDate"]
+    },
+    "grades": {
+      "title": "Grades",
+      "description": "Grades and feedback for students in activities",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "activityId": { "type": "string" },
+        "studentId": { "type": "string" },
+        "score": { "type": "number" },
+        "deliveredOnTime": { "type": "string" },
+        "comments": { "type": "string" },
+        "notifiedWhatsApp": { "type": "boolean" }
+      },
+      "required": ["id", "activityId", "studentId"]
+    },
+    "attendance": {
+      "title": "Attendance",
+      "description": "Daily student attendance records",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "studentId": { "type": "string" },
+        "groupId": { "type": "string" },
+        "date": { "type": "string" },
+        "status": { "type": "string" },
+        "excuseReason": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["id", "studentId", "groupId", "date", "status"]
+    },
+    "settings": {
+      "title": "School Settings",
+      "description": "Institutional configuration, grading scale, and periods",
+      "type": "object",
+      "properties": {
+        "schoolName": { "type": "string" },
+        "academicYear": { "type": "number" },
+        "currentPeriod": { "type": "string" }
+      }
+    }
+  }
+}

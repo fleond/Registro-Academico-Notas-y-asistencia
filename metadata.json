@@ -1,0 +1,8 @@
+{
+  "name": "Remix fleond MySQL",
+  "description": "Sistema integral de toma de asistencia escolar con uniforme, observaciones, registro de notas y notificación inmediata a acudientes por WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
